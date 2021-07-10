@@ -6,7 +6,20 @@ const app = Vue.createApp({
     data() {
         return {
             title: 'The Final Empire',
-            author: 'Brandon Sandorson'
+            author: 'Brandon Sandorson',
+            age: 45,
+            showBooks: true
+        }
+    },
+    methods: {
+
+        changeTitle(title) {
+            console.log('You Clicked Me')
+            this.title = title
+        },
+
+        toggleShowBooks() {
+            this.showBooks = !this.showBooks;
         }
     }
 })
