@@ -20,7 +20,16 @@
 <body>
     
     <div id="app">
-        <p>{{ title }} - {{ author }} - {{ age }}</p>
+        <p>{{ books[0].title }} - {{ books[0].author }}</p> <!-- Manual way -->
+
+        <div v-if="showBooks">
+            <ul>
+                <li v-for="book in books"> 
+                    <h3>{{ book.title }}</h3>
+                    <p>{{ book.author }}</p>
+                </li>
+            </ul>
+        </div>
 
         <!-- <button v-on:click="age++">Increase Age</button>
         <button v-on:click="age--">Decrease Age</button> -->
